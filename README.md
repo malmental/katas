@@ -1,1 +1,1 @@
-# katas
+Repositorio para deliverear las katas y seguir prácticando.
