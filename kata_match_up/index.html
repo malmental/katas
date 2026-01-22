@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero de cartas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Kata-Match-UP</h1>
+   
+        <div class="tablero">
+            <div class="carta"></div>
+            <div class="carta"></div>
+            <div class="carta"></div>
+            <div class="carta"></div>
+            <div class="carta"></div>
+            <div class="carta"></div>
+            <div class="carta"></div>
+            <div class="carta"></div>
+            <div class="carta"></div>
+            <div class="carta"></div>
+            <div class="carta"></div>
+            <div class="carta"></div>
+            <div class="carta"></div>
+            <div class="carta"></div>
+            <div class="carta"></div>
+            <div class="carta"></div>
+        </div>
+    
+    <script>
+        var cartas = document.querySelectorAll('.carta');
+        
+        function cambiarImagen() {                                                   // Funcion anonima que se activa al clicar xq está siendo llamada en clickCarta()
+                if (this.style.backgroundImage.includes('naipeNaranja.png')) {       // El operador IF comprueba que la imagen contenga el texto naipeNaranja.png,
+                    this.style.backgroundImage = "url('assets/naipeAzul.png')";      // Si es así, cambia a assets/naipeAzul.png
+                } else {
+                    this.style.backgroundImage = "url('assets/naipeNaranja.png')";   // Si no, se mantiene en la imagen original
+                }
+            }
+
+            function clickCarta(carta) {                                             // Recibie como parametro carta
+                carta.addEventListener('click', cambiarImagen);                      // El 'escuchador del raton' que llamará a la funcion cambiarImagn()
+            }
+
+            cartas.forEach(clickCarta);                                             // Para cada carta en la coleccion, 
+                                                                                    // llamará a la funcion clickCarta para agregar el evnto de 'click'
+    </script>
+
+</body>
+</html>
+
+

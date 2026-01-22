@@ -1,0 +1,48 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:monospace;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    background-color: aqua;
+    /* Se sale de la regla del flex con align-self  */
+    align-self: flex-start; 
+    font-size: 32px;
+    padding: 25px;   
+}
+   
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 20px;
+    padding: 50px;
+}
+
+.carta {
+    text-align: center;
+    box-shadow: 9px 4px 0;
+    border: 2px solid;
+    padding: 40px 20px;
+    min-width: 150px;
+    min-height: 220px;
+    background-image: url('assets/naipeAzul.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.carta:hover {
+    box-shadow: 9px 4px 8px;
+    border-color: red ;
+}
