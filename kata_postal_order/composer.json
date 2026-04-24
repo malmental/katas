@@ -1,0 +1,10 @@
+{
+    "name": "katas/kata_postal_order",
+    "description": "Sistema de turnos de correo",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {} 
+}
