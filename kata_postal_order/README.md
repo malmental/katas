@@ -6,6 +6,7 @@
 ```bash
 git clone https://github.com/malmental/katas/
 cd kata_postal_order
+```
 
 2. Instalar las dependencias
 
