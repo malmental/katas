@@ -9,12 +9,14 @@ cd kata_postal_order
 ```
 
 2. Instalar las dependencias
-
+```bash
 composer install
+```
 
 3. Ejecutar el programa
-
+```bash
 php index.php
+```
 
 4. Funcionamiento
 
