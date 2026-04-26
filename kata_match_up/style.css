@@ -1,11 +1,11 @@
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family:monospace;
+    font-family: monospace;
     background-color: beige;
     display: flex;
     flex-direction: column;
@@ -15,15 +15,14 @@ body {
 
 h1 {
     background-color: aqua;
-    /* Se sale de la regla del flex con align-self  */
-    align-self: flex-start; 
+    align-self: flex-start;
     font-size: 32px;
-    padding: 25px;   
+    padding: 25px;
 }
-   
+
 .tablero {
     display: grid;
-    grid-template-columns: repeat(4, 2fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 50px;
 }
@@ -40,9 +39,35 @@ h1 {
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
+    position: relative;
+}
+
+.carta.revelada {
+    background-color: white;
+    background-image: none;
+}
+
+.carta.revelada::after {
+    content: attr(data-texto);
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+}
+
+.carta.emparejada {
+    background-color: #e0e0e0;
+    background-image: none;
+    border-color: green;
+}
+
+.carta.emparejada::after {
+    content: attr(data-texto);
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
 }
 
 .carta:hover {
     box-shadow: 9px 4px 8px;
-    border-color: red ;
+    border-color: red;
 }
