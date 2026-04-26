@@ -21,7 +21,7 @@ function inputUsuario($pregunta) {
     return trim(fgets(STDIN));
 }
 
-// Inciar el programa: en la terminal php index.php:
+// Inciar el programa: en la terminal con 'php index.php'
 echo "Que vas a regalar para Sant Jordi?" . PHP_EOL;
 echo "1. Libro" . PHP_EOL;
 echo "2. Rosa" . PHP_EOL;
