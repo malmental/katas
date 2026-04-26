@@ -32,7 +32,7 @@ class MaquinaTurnos
     {
         foreach ($this->ticketsPendientes as $posicion => $ticket) {
             if ($ticket->getTipo() === $tipo) {
-                unset($this->ticketsPendientes[$osicion]);
+                unset($this->ticketsPendientes[$posicion]);
                 $this->ticketsPendientes = array_values($this->ticketsPendientes);
                 return $ticket;
             }
